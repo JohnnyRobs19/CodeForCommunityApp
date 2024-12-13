@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             btnHome.setOnClickListener(v -> {
                 try {
                     // Navigate to the home page
-                    navController.navigate(R.id.homePage);
+                    navController.navigate(R.id.action_foodFragment_to_homePage);
                 } catch (IllegalArgumentException e) {
                     Log.e("Navigation", "Unable to find NavController", e);
                 }
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             btnFood.setOnClickListener(v -> {
                 try {
                     // Navigate to the food fragment
-                    navController.navigate(R.id.foodFragment);
+                    navController.navigate(R.id.action_homePage_to_foodFragment);
                 } catch (IllegalArgumentException e) {
                     Log.e("Navigation", "Unable to find NavController", e);
                 }
