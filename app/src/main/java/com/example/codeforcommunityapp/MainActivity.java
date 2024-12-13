@@ -1,6 +1,8 @@
 package com.example.codeforcommunityapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,4 +22,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    ImageButton btnHome;
+
+
+
 }
