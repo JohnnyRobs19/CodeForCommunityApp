@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageButton btnHome = findViewById(R.id.homelogo);
+        ImageButton btnFood=findViewById(R.id.foodlogo);
         if (btnHome != null) {
             btnHome.setOnClickListener(v -> {
                 try {
@@ -32,6 +33,19 @@ public class MainActivity extends AppCompatActivity {
             });
         } else {
             Log.e("UI", "Home button not found in layout");
+        }
+
+        if (btnFood != null) {
+            btnFood.setOnClickListener(v -> {
+                try {
+                    NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+                    navController.navigate(R.id.foodFragment);
+                } catch (IllegalArgumentException e) {
+                    Log.e("Navigation", "Unable to find NavController", e);
+                }
+            });
+        } else {
+            Log.e("UI", "Food button not found in layout");
         }
     }
 }
