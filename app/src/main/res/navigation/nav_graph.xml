@@ -3,10 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity3">
-    <activity
-        android:id="@+id/mainActivity3"
-        android:name="com.example.codeforcommunityapp.MainActivity"
+    app:startDestination="@id/homePage">
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.example.codeforcommunityapp.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_foodFragment_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.codeforcommunityapp.HomePage"
         android:label="fragment_home_page"
-        tools:layout="@layout/fragment_home_page" />
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_foodFragment"
+            app:destination="@id/foodFragment" />
+    </fragment>
 </navigation>
